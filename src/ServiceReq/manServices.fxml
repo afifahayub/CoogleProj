@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="746.0" prefWidth="1083.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ServiceReq.ServController">
+    <children>
+        <TabPane prefHeight="746.0" prefWidth="1083.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Manage Services">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="687.0" prefWidth="955.0">
+                            <children>
+                                <GridPane layoutX="10.0" layoutY="1.0" prefHeight="704.0" prefWidth="1070.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="298.0" minWidth="0.0" prefWidth="123.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="949.0" minWidth="10.0" prefWidth="947.0" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints maxHeight="111.0" minHeight="10.0" prefHeight="57.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="223.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="155.0" minHeight="10.0" prefHeight="63.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="223.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="223.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="223.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="223.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="223.0" minHeight="10.0" prefHeight="59.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="223.0" minHeight="10.0" prefHeight="59.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="223.0" minHeight="10.0" prefHeight="68.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="407.0" minHeight="10.0" prefHeight="237.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="230.0" minHeight="10.0" prefHeight="59.0" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label text="Service ID" />
+                                        <Label text="Type of Service" GridPane.rowIndex="2" />
+                                        <Label text="Date" GridPane.rowIndex="1" />
+                                        <TextField fx:id="title" prefHeight="31.0" prefWidth="657.0" GridPane.columnIndex="1" />
+                                        <TextField fx:id="rated" prefHeight="35.0" prefWidth="755.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                        <TableView fx:id="DVDtable" prefHeight="396.0" prefWidth="741.0" GridPane.columnIndex="1" GridPane.rowIndex="10">
+                                            <columns>
+                                                <TableColumn fx:id="titlecol" prefWidth="91.0" text="Service ID" />
+                                                <TableColumn fx:id="yearcol" prefWidth="79.0" text="Date" />
+                                                <TableColumn fx:id="ratedcol" prefWidth="126.0" text="Type of Service" />
+                                    <TableColumn prefWidth="78.0" text="Size" />
+                                    <TableColumn prefWidth="85.0" text="Status" />
+                                    <TableColumn prefWidth="136.0" text="Assigned To" />
+                                    <TableColumn prefWidth="89.0" text="Source" />
+                                    <TableColumn prefWidth="94.0" text="Destination" />
+                                    <TableColumn prefWidth="70.0" text="BOL" />
+                                    <TableColumn prefWidth="98.0" text="Notes" />
+                                            </columns>
+                                        </TableView>
+                                        <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="75.0" text="ADD" textFill="#833333" GridPane.rowIndex="10">
+                                            <font>
+                                                <Font name="System Bold" size="17.0" />
+                                            </font>
+                                        </Button>
+                                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#manClients" prefHeight="39.0" prefWidth="66.0" text="BACK" textAlignment="CENTER" GridPane.rowIndex="11" />
+                                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="46.0" prefWidth="105.0" text="REFRESH" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+                              <SplitPane dividerPositions="0.20708446866485014" prefHeight="160.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="11">
+                                <items>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                       <children>
+                                          <Button layoutX="19.0" layoutY="6.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="88.0" text="Load" />
+                                       </children>
+                                    </AnchorPane>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                       <children>
+                                          <Button layoutX="24.0" layoutY="5.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="88.0" text="Delete" />
+                                       </children>
+                                    </AnchorPane>
+                                </items>
+                              </SplitPane>
+                              <TextField GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <Label prefHeight="21.0" prefWidth="110.0" text="Assigned To" GridPane.rowIndex="5" />
+                              <Label text="Source" GridPane.rowIndex="6" />
+                              <Label text="Status" GridPane.rowIndex="4" />
+                              <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <ChoiceBox prefHeight="31.0" prefWidth="261.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextField GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <Label text="Size" GridPane.rowIndex="3" />
+                              <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label text="Destination" GridPane.rowIndex="7" />
+                              <Label text="Bill of Lading" GridPane.rowIndex="8" />
+                              <TextField GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                              <TextField GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                              <Label text="Notes" GridPane.rowIndex="9" />
+                              <TextField GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                                    </children>
+                                </GridPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</Pane>

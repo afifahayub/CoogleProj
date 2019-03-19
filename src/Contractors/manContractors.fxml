@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Contractors.ContrController">
+    <children>
+        <TabPane layoutX="2.0" prefHeight="700.0" prefWidth="900.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Manage Contractors">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="687.0" prefWidth="955.0">
+                            <children>
+                                <GridPane layoutX="10.0" layoutY="1.0" prefHeight="659.0" prefWidth="886.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="298.0" minWidth="0.0" prefWidth="135.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="784.0" minWidth="10.0" prefWidth="751.0" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints maxHeight="111.0" minHeight="10.0" prefHeight="57.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="155.0" minHeight="10.0" prefHeight="63.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="223.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="223.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="223.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="223.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="407.0" minHeight="10.0" prefHeight="365.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="230.0" minHeight="10.0" prefHeight="59.0" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label text="First Name" />
+                                        <Label text="Last Name" GridPane.rowIndex="1" />
+                                        <Label text="Company Name" GridPane.rowIndex="2" />
+                                        <TextField fx:id="title" prefHeight="31.0" prefWidth="618.0" GridPane.columnIndex="1" />
+                                        <TextField fx:id="yearreleased" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                        <TextField fx:id="rated" prefHeight="35.0" prefWidth="755.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                        <TableView fx:id="DVDtable" prefHeight="396.0" prefWidth="741.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                            <columns>
+                                                <TableColumn fx:id="titlecol" prefWidth="103.0" text="First Name" />
+                                                <TableColumn fx:id="yearcol" prefWidth="105.0" text="Last Name" />
+                                                <TableColumn fx:id="ratedcol" prefWidth="119.0" text="Company Name" />
+                                    <TableColumn prefWidth="186.0" text="Company Address" />
+                                    <TableColumn prefWidth="123.0" text="Phone Number" />
+                                    <TableColumn prefWidth="114.0" text="Specialty" />
+                                            </columns>
+                                        </TableView>
+                                        <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="75.0" text="ADD" textFill="#833333" GridPane.rowIndex="6">
+                                            <font>
+                                                <Font name="System Bold" size="17.0" />
+                                            </font>
+                                        </Button>
+                                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#manClients" prefHeight="39.0" prefWidth="66.0" text="BACK" textAlignment="CENTER" GridPane.rowIndex="7" />
+                                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="46.0" prefWidth="105.0" text="REFRESH" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                              <SplitPane dividerPositions="0.20708446866485014" prefHeight="160.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                                <items>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                       <children>
+                                          <Button layoutX="19.0" layoutY="6.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="88.0" text="Load" />
+                                       </children>
+                                    </AnchorPane>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                       <children>
+                                          <Button layoutX="24.0" layoutY="5.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="88.0" text="Delete" />
+                                       </children>
+                                    </AnchorPane>
+                                </items>
+                              </SplitPane>
+                              <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <Label prefHeight="21.0" prefWidth="110.0" text="Phone Number" GridPane.rowIndex="4" />
+                              <ChoiceBox prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <Label text="Specialty" GridPane.rowIndex="5" />
+                              <Label text="Company Address" GridPane.rowIndex="3" />
+                              <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    </children>
+                                </GridPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</Pane>
